@@ -1,8 +1,8 @@
 pipeline {
-    agent { label 'agent-crud' }
+    agent { label "agent-crud" }
   
     stages {
-        stage('Code Clone') {
+        stage("Code Clone") {
             steps {
                echo "Cloning The Repo"
                git url: 'https://github.com/Sat70/Deployment-Crud-Mean-App.git', branch: 'main'
@@ -10,7 +10,7 @@ pipeline {
             }
         }
 
-        stage('Build Docker Images') {
+        stage("Build Docker Images") {
             steps {
                 script {
                     echo "Building"
